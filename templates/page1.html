@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Tech Nursery Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef5eb;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #4caf50;
+            margin-bottom: 30px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content ul li {
+            font-size: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .content ul li::before {
+            content: '\2713';
+            color: #4caf50;
+            font-size: 22px;
+            margin-top: 3px;
+        }
+
+        .content ul li strong {
+            color: #2e7d32;
+        }
+
+        .content ul li span {
+            display: inline-block;
+            max-width: 85%;
+        }
+
+        .image {
+            text-align: center;
+            padding: 20px;
+            background: #f0f5f0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .image img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: -30px;
+        }
+
+        footer {
+            text-align: center;
+            background: #4caf50;
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Objectives of Hi-Tech Nursery Project
+        </div>
+
+        <div class="content">
+            <h2>Key Objectives</h2>
+            <ul>
+                <li>
+                    <strong>PRODUCE:</strong>
+                    <span>High-quality planting material of target bamboo species for sustainable growth.</span>
+                </li>
+                <li>
+                    <strong>STANDARDISE:</strong>
+                    <span>Enhance and refine nursery techniques for bamboo cultivation, including the use of Mist Chambers, Hardening Chambers, 
+                        and Micropropagation methods.</span>
+                </li>
+                <li>
+                    <strong>ESTABLISH:</strong>
+                    <span>A rhizome bank for commercial bamboo species to ensure long-term availability.</span>
+                </li>
+                <li>
+                    <strong>DISSEMINATE:</strong>
+                    <span>Share advanced bamboo propagation techniques through training and extension programs.</span>
+                </li>
+            </ul>
+        </div>
+
+       
+        
+    </div>
+
+   
+</body>
+</html>
+
+{% endblock %}

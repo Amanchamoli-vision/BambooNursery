@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #2bfa24, #ab47bc);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .content {
+            padding: 30px 40px;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #2bf84d;
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .text ul li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            color: rgb(19, 33, 241);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .text ul li::before {
+            content: '\2713'; /* Checkmark symbol */
+            position: absolute;
+            left: 0;
+            color: #34f81a;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        
+        .image {
+        flex: 1;
+        text-align: center;
+        min-width: 270px;
+        height: 100%; /* Adjusts to the full height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Prevents overflow of the image */
+        border-radius: 12px;
+        background: #f0f0f0; /* Background fallback */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill; /* Ensures the image stretches to fit the entire container */
+        border-radius: 12px; /* Matches the container's rounded edges */
+    }
+</style>
+
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Discussion
+        </div>
+
+        <div class="content">
+            <h2>Key Insights and Benefits</h2><br><br>
+            <div class="details">
+                <div class="text">
+                    <ul>
+                        <li><strong>Ecological Benefits:</strong> Bamboo aids in soil erosion control, water retention, and enhances biodiversity. Adaptable species for subtropical and temperate climates in Uttarakhand.</li><hr><br><br>
+                        <li><strong>Economic Potential:</strong> High-value bamboo products for construction, furniture, paper, and handicrafts. Short time to market through advanced propagation techniques (micropropagation, rhizome propagation).</li><hr><br><br>
+                        <li><strong>Social Impact:</strong> Job creation in rural areas via training programs. Diversification of livelihoods for smallholder farmers.</li><hr><br><br>
+                        <li><strong>Challenges & Solutions:</strong> Climate sensitivity addressed with species suited to local conditions. Controlled microclimates for frost-sensitive species.</li><hr><br><br>
+                        <li><strong>Market Development:</strong> Bamboo processing industries for paper, furniture, and crafts. Collaboration with government & private sectors to develop a bamboo value chain.</li>
+                    </ul>
+                </div>
+
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/image.png') }}">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="about-container">
+        <h2>About Us</h2>
+        <p>The focus is on improving sustainable livelihoods in rural areas through bamboo cultivation. This is crucial for ecological restoration, economic growth, and poverty reduction.
+
+            Global Bamboo Industry Value: Around $60 billion, with India contributing about 4% of the total.
+            
+            The industry utilizes advanced technologies, including mist chambers, hardening chambers, and micropropagation methods.</p>
+        <h3>Benifits:</h3>
+        <div class="link-cards">
+            <a href="{{ url_for('page1') }}" class="link-card">Objectives of Hi-Tech Nursery</a>
+            <a href="{{ url_for('page2') }}" class="link-card">Species Identified</a>
+            <a href="{{ url_for('page3') }}" class="link-card">Cultivation Procedures</a>
+            <a href="{{ url_for('page4') }}" class="link-card">Advanced Methods</a>
+            <a href="{{ url_for('page5') }}" class="link-card">Findings</a>
+            <a href="{{ url_for('page6') }}" class="link-card">Discussion</a>
+        </div>
+    </div>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        p {
+            color: #34495e;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #2980b9;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        /* Link Cards Styles */
+        .link-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .link-card {
+            display: block;
+            background: #1abc9c; /* Soft Green */
+            color: white;
+            padding: 25px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 600;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            transform: scale(1);
+        }
+
+        /* Hover Effects */
+        .link-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+            background: #16a085; /* Darker Green on hover */
+        }
+
+        .link-card:active {
+            transform: scale(1.02);
+            background: #1abc9c; /* Return to original color */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .link-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .link-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section id="about">
+        <h2>What We Do?</h2>
+        <p>Focus: Sustainable rural livelihood improvement through bamboo cultivation. Vital for ecological restoration, economic development, and poverty alleviation. 
+            Value of Global Bamboo Sector: Approximately $60 billion, with India contributing around 4%.
+            Employs advanced technologies such as mist chambers, hardening chambers, and micropropagation.
+        </p>
+    </section>
+
+    <section id="gallery">
+        <div class="gallery">
+            <img src="{{ url_for('static', filename='images/image1.jpeg') }}">
+            <img src="{{ url_for('static', filename='images/image2.jpeg') }}">
+            <img src="{{ url_for('static', filename='images/image3.jpeg') }}">
+            <img src="{{ url_for('static', filename='images/image4.jpeg') }}">
+            <img src="{{ url_for('static', filename='images/image5.jpeg') }}">
+            <img src="{{ url_for('static', filename='images/image6.jpeg') }}">
+        </div>
+    </section>
+
+    <div class="text1">
+        <p>Sustainable bamboo cultivation enhances rural livelihoods, supports ecological restoration, and drives economic growth. A $60 billion global sector, India contributes 4%. Advanced technologies like mist chambers, hardening chambers, and micropropagation boost productivity. Bamboo cultivation aids poverty alleviation while fostering ecological balance and sustainable development in rural communities worldwide.</p>
+    </div>
+       
+    </section>
+{% endblock %}

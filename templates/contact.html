@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('https://via.placeholder.com/1200x400?text=Contact+Us+Image');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-top: 60px;
+    color: #2a7b2e;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact address {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2a7b2e;
+}
+
+.contact address a {
+    color: #2a7b2e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact address a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+/* Improved Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 70px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2a7b2e, #e8f5e9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+}
+
+form h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffffcc;
+    margin-bottom: 5px;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    /* Center the text vertically */
+    text-align: left;
+    line-height: 1.5; /* Adjust this value to fine-tune alignment */
+    vertical-align: middle;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    /* Ensure proper vertical alignment */
+    display: flex;
+    align-items: center;
+}
+
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #1b5e20;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #145a14;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Call Section */
+#call {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #1cb824;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+#call p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#call .fas {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+#call a {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#call a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .contact-container::before {
+        height: 150px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #call p {
+        font-size: 18px;
+    }
+
+    #call .fas {
+        font-size: 20px;
+    }
+}
+</style>
+
+<div id="contact" class="contact">
+    <h2>Our Address</h2>
+    <address>
+        <strong>Location:</strong>
+        <a href="https://www.google.com/maps/place/Uttarakhand+State+Council+for+Science+And+Technology/@30.3378996,77.9180211,17z/data=!3m1!4b1!4m6!3m5!1s0x390f2aa97cc7442d:0x641293dde406007b!8m2!3d30.337895!4d77.920596!16s%2Fg%2F11bt_ggb7c!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D" 
+           target="_blank">
+            Uttarakhand State Council for Science And Technology
+        </a>
+        <br>
+        <span>Email Us: <a href="mailto:ucost@ucost.in">ucost@ucost.in</a></span><br>
+        <span>Call Us: <a href="tel:+9101352976266">91-0135-2976266</a></span>
+    </address>
+</div>
+
+<div class="contact">
+    <form id="contactForm">
+        <h2>Send Us a Message</h2>
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+</div>
+
+<div id="call" class="call">  
+    <p>Take the first step towards the right direction</p>
+    <i class="fas fa-phone-alt"></i>
+    Call us 10:00 am to 5:00 pm<br>
+</div>
+
+{% endblock %}

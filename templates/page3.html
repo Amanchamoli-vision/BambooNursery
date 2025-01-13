@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivation Procedures</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef5eb;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .cultivation {
+            padding: 40px 20px;
+        }
+
+        .cultivation h2 {
+            text-align: center;
+            color: #4caf50;
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .cultivation .details {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .cultivation .text {
+            flex: 2;
+        }
+
+        .cultivation .text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cultivation .text ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .cultivation .text ul li::before {
+            content: '\2192'; /* Unicode arrow symbol */
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 20px;
+        }
+
+        .cultivation .image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .cultivation .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            background: #4caf50;
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Cultivation Procedures
+        </div>
+
+        <div class="cultivation">
+            <h2>Steps for Cultivating Bamboo</h2>
+            <div class="details">
+                <div class="text">
+                    <ul>
+                        <li><strong>Site Selection:</strong> Identify areas with suitable microclimates and minimal competition from other plants.</li>
+                        <li><strong>Soil Requirements:</strong> Bamboo prefers well-drained, loamy soils with a pH range of 5.5 to 6.5. Conduct soil tests to determine nutrient needs.</li>
+                        <li><strong>Temperature and Growth Conditions:</strong> Optimal growth occurs between 20°C and 35°C. Regular monitoring of environmental conditions is essential.</li>
+                        <li><strong>Planting Techniques:</strong> Transplanting should occur during the rainy season to ensure adequate moisture. Proper spacing between plants is crucial for healthy growth.</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/imageucost.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
+
+{% endblock %}

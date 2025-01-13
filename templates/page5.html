@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findings</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #1a237e, #3949ab);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #1a237e;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        .highlight {
+            background-color: #c8e6c9;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: #1a237e;
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Findings
+        </div>
+
+        <div class="content">
+            <!-- <h2>Summary of Results</h2> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Findings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">Bamboo Species Selection</td>
+                        <td>Commercial and ornamental species (<i>Bambusa vulgaris</i>, <i>Dendrocalamus asper</i>) are highly suitable for diverse Uttarakhand climates.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Propagation Success</td>
+                        <td>Rhizome propagation yields 90% survival rate, ensuring rapid scaling of bamboo farming.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Training Impact</td>
+                        <td>Hands-on training equipped participants with skills in soil preparation, propagation, and bamboo product creation.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Economic Viability</td>
+                        <td>Bamboo saplings sold at INR 30-40, with mature bamboo valued higher, offering lucrative income for farmers.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Environmental Impact</td>
+                        <td>Bamboo absorbs high levels of CO<sub>2</sub>, contributes to sustainable resource cycles, and combats soil erosion.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Future Prospects</td>
+                        <td>Scalable model for other regions in Uttarakhand and nationwide. Need for better infrastructure, market linkages, and financial support for long-term success.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
+
+{% endblock %}
