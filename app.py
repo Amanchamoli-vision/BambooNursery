@@ -47,9 +47,7 @@ def page6():
 def page7():
     return render_template('page7.html')
 
-@app.route('/page8')
-def page8():
-    return render_template('page8.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

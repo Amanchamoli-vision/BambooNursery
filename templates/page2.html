@@ -51,8 +51,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: space-between;
-            padding: 20px 0;
+            justify-content: flex-start;
         }
 
         .section {
@@ -66,7 +65,7 @@
         }
 
         .section h3 {
-            text-align: center;
+            text-align: left;
             color: #333;
             margin-bottom: 15px;
             font-size: 20px;
@@ -75,7 +74,7 @@
         .section ul {
             list-style: none;
             margin: 0;
-            padding: 0 20px;
+            padding: 0;
             color: #555;
         }
 
@@ -83,6 +82,7 @@
             position: relative;
             padding-left: 25px;
             margin-bottom: 10px;
+            text-align: left;
         }
 
         .section ul li::before {
@@ -91,20 +91,6 @@
             left: 0;
             color: #4caf50;
             font-size: 16px;
-        }
-
-        .image {
-            text-align: center;
-            padding: 20px;
-            background: #f0f5f0;
-            border-top: 2px solid #e0e0e0;
-        }
-
-        .image img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         footer {
@@ -164,10 +150,8 @@
             </div>
         </div>
 
-        
+    </div>
 </body>
 </html>
-
-
 
 {% endblock %}

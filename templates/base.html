@@ -5,19 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Environmental Website{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: nowrap; /* Ensure items stay in a single row */
+            padding: 10px;
+            background-color: #228B22;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo-container {
+            display: flex;
+            gap: 20px; /* Space between logos */
+            align-items: center;
+            flex-shrink: 0; /* Prevent shrinking of logos */
+        }
+
+        header .logo {
+            height: 95px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        header .logo:hover {
+            transform: scale(1.1);
+        }
+
+        header h1 {
+            flex-grow: 1; /* Allow the text to occupy available space */
+            font-size: 24px;
+            text-align: center;
+            line-height: 1.4;
+            margin: 0 20px; /* Add spacing between logos and text */
+            word-wrap: break-word; /* Break long words if necessary */
+        }
+
+        nav {
+            background-color: rgb(29, 218, 29);
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 28px;
+            color: #2a2a2a;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #2a2a2a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                justify-content: space-between; /* Keep spacing even */
+            }
+
+            header h1 {
+                font-size: 20px;
+                margin: 0 10px;
+            }
+
+            header .logo {
+                height: 80px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                /* font-size: 18px; */
+                font-size: 7vw;
+            }
+
+            header .logo {
+                height: 70px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            nav ul li a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header with Logos -->
     <header>
         <div class="logo-container">
             <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo 1" class="logo">
             <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo 2" class="logo">
             <img src="{{ url_for('static', filename='images/logo3.jpg') }}" alt="Logo 3" class="logo">
         </div>
-        <h1>Hi-Tech Bamboo Nursery Under the (National Bamboo Mission Scheme, GOI)</h1>
+        <h1>Hi-Tech Bamboo Nursery <br> Under the <br>(National Bamboo Mission Scheme, GOI)</h1>
     </header>
 
-    <!-- Navigation Section -->
     <nav>
         <ul>
             <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -27,12 +194,10 @@
         </ul>
     </nav>
 
-    <!-- Content Section -->
     <div class="content">
         {% block content %}{% endblock %}
     </div>
 
-    <!-- Footer -->
     <footer>
         <span>Email Us: <a href="mailto:ucost@ucost.in">ucost@ucost.in</a></span><br>
         <span>Call Us: <a href="tel:+9101352976266">91-0135-2976266</a></span>

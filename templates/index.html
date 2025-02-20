@@ -1,28 +1,78 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section id="about">
-        <h2>What We Do?</h2>
-        <p>Focus: Sustainable rural livelihood improvement through bamboo cultivation. Vital for ecological restoration, economic development, and poverty alleviation. 
-            Value of Global Bamboo Sector: Approximately $60 billion, with India contributing around 4%.
-            Employs advanced technologies such as mist chambers, hardening chambers, and micropropagation.
+    <!-- About Section with Mission and Content -->
+    <section id="about" style="background-color: #f4f4f4; padding: 40px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-top: 30px;">
+        <h2 style="font-size: 32px; color: #1e88e5; margin-bottom: 20px; text-transform: uppercase; font-weight: bold;">Our Mission</h2>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 0 15px;">
+            Our mission is to promote sustainable bamboo cultivation in the Uttarakhand enhancing the green cover and providing economic benefits to local communities. We aim to offer high-quality bamboo plants and educate the public about the environmental benefits of bamboo.
         </p>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            Through the National Bamboo Mission Scheme, we strive to bring innovation and technology into bamboo cultivation, ensuring eco-friendly practices are followed to protect our environment for future generations.
+        </p>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            To increase the area under bamboo plantation in non forest Government and private lands to supplement farm income and contribute towards resilience to climate change as well as availability of quality raw material requirement of industries.
+        </p>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            To improve post-harvest management through establishment of innovative primary processing units near the source of production, primary treatment and seasoning plants, preservation technologies and market infrastructure.
+        </p>
+
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            To promote product development keeping in view market demand, by assisting R&D, entrepreneurship & business models at micro, small and medium levels and feed bigger industry.
+        </p>
+
+        <!-- <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            To rejuvenate the under developed bamboo UCOST Uttarakhand.
+        </p> -->
+
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+
+        </p>
+
+        <!-- <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            To realign efforts so as to reduce dependency on import of bamboo and bamboo products by way of improved productivity and suitability of domestic raw material for industry, so as to enhance income of the primary producers.
+        </p>
+
+
+
+
+
+
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            <span style="color: #4caf50; font-weight: bold;">Join us in making a positive impact on the environment!</span>
+        </p> -->
     </section>
 
-    <section id="gallery">
-        <div class="gallery">
-            <img src="{{ url_for('static', filename='images/image1.jpeg') }}">
-            <img src="{{ url_for('static', filename='images/image2.jpeg') }}">
-            <img src="{{ url_for('static', filename='images/image3.jpeg') }}">
-            <img src="{{ url_for('static', filename='images/image4.jpeg') }}">
-            <img src="{{ url_for('static', filename='images/image5.jpeg') }}">
-            <img src="{{ url_for('static', filename='images/image6.jpeg') }}">
+    <!-- Gallery Section -->
+    <section id="gallery" style="margin-top: 40px;">
+        <div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px;">
+            <img src="{{ url_for('static', filename='images/image1.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/image2.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/image3.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/image4.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/image5.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/image6.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/tr1.jpeg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="{{ url_for('static', filename='images/tr2.jpg') }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
         </div>
     </section>
 
-    <div class="text1">
-        <p>Sustainable bamboo cultivation enhances rural livelihoods, supports ecological restoration, and drives economic growth. A $60 billion global sector, India contributes 4%. Advanced technologies like mist chambers, hardening chambers, and micropropagation boost productivity. Bamboo cultivation aids poverty alleviation while fostering ecological balance and sustainable development in rural communities worldwide.</p>
-    </div>
-       
+    <!-- Vision Section -->
+    <section id="vision" style="background-color: #ffffff; padding: 40px 20px; margin-top: 40px; text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h2 style="font-size: 32px; color: #1e88e5; margin-bottom: 20px; text-transform: uppercase; font-weight: bold;">Our Vision</h2>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 0 15px;">
+            Sustainable rural livelihood improvement through bamboo cultivation. Vital for ecological restoration, economic development, and poverty alleviation.
+        </p>
+        <!-- <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            Value of Global Bamboo Sector: Approximately $60 billion, with India contributing around 4%.
+        </p>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 0 15px;">
+            Employs advanced technologies such as mist chambers, hardening chambers, and micropropagation.
+        </p> -->
     </section>
+
+    <!-- Text Section with Relevant Content -->
+    
+
 {% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="achievements">
+    <h1>Achievements</h1>
+    <p>At UCOST (Uttarakhand Council for Science and Technology), we are committed to fostering sustainable bamboo cultivation and enhancing livelihood opportunities in Uttarakhand. Our initiatives align with the National Bamboo Mission (NBM) guidelines, empowering rural communities. Here are some of our key accomplishments:</p>
+
+    <h2>1. Standard Operating Procedure (SOP) for Bamboo Production</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/02.jpeg" alt="SOP for Bamboo Production" class="achievement-image"> -->
+        <p>We have developed a comprehensive SOP for cultivating selective bamboo species in Uttarakhand. This document ensures sustainable and efficient farming practices, benefiting local farmers while contributing to the state's economy.</p>
+    </div>
+
+    <h2>2. Training Manual on Vegetative Propagation</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/01.jpeg" alt="Training Manual on Vegetative Propagation" class="achievement-image"> -->
+        <p>A detailed Training Manual (Draft) has been prepared to guide rural farmers on vegetative propagation techniques and the identification of bamboo species suitable for cultivation in Uttarakhand. This resource plays a vital role in advancing bamboo farming practices.</p>
+    </div>
+
+    <h2>3. Abstract Presentation at 19th USSTC</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/002.jpeg" alt="Abstract Presentation at USSTC" class="achievement-image"> -->
+        <p>We showcased an abstract titled <strong>"Hi-Tech Bamboo Nursery as a Sustainable Source of Better Livelihood in Uttarakhand"</strong> during the 19th Uttarakhand State Science & Technology Conference (USSTC). The presentation highlighted the immense potential of high-tech bamboo nurseries in transforming rural livelihoods.</p>
+    </div>
+
+    <h2>4. Awareness Campaign Materials</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/achi1.jpeg" alt="Awareness Campaign Materials" class="achievement-image"> -->
+        <p>As part of our efforts to raise awareness, we designed draft signboards and hoardings to promote the benefits of bamboo cultivation. These materials will be displayed at strategic locations across Uttarakhand to encourage community participation.</p>
+    </div>
+
+    <h2>5. Hands-On Training Program</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/achi2.jpeg" alt="Hands-On Training Program" class="achievement-image"> -->
+        <p>From November 11 to 13, 2024, we conducted a 3-day hands-on training program on Bamboo Nursery Techniques and Management at the Ladpur Nursery, under the Uttarakhand Bamboo and Fiber Development Board. Participants gained valuable practical experience in nursery operations and management.</p>
+    </div>
+
+    <h2>6. Vision for Sustainable Development</h2>
+    <div class="achievement-item">
+        <!-- <img src="/static/images/achi3.jpeg" alt="Vision for Sustainable Development" class="achievement-image"> -->
+        <p>Our vision is to establish a robust framework for bamboo farming in Uttarakhand, fostering economic growth, sustainable livelihoods, and environmental conservation. By empowering rural communities with essential knowledge and resources, we aim to contribute significantly to the state’s development.</p>
+    </div>
+
+</div>
+
+<style>
+    .achievements {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .achievement-item {
+        display: flex;
+        align-items: center; /* Center images and text vertically */
+        margin-bottom: 20px;
+    }
+    .achievement-image {
+        width: 150px; /* Set a uniform width for all images */
+        height: 150px; /* Set a uniform height for all images */
+        object-fit: cover; /* Ensure images fit within the dimensions */
+        margin-right: 15px;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+        transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+    }
+
+    .achievement-image:hover {
+        transform: scale(1.2); /* Zoom in on hover */
+    }
+
+    h1, h2 {
+        color: #2c3e50;
+    }
+    p {
+        color: #34495e;
+        margin-top: 10px; /* Adds space between the image and text */
+    }
+</style>
+{% endblock %}
